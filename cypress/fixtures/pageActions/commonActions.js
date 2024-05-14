@@ -17,6 +17,9 @@ export const clickHomePageButton = (button) => {
         case 'Logout':
             cy.get(CommonObjects.hrefButtonModal('logout')).click()
             break;
+        case 'Contact Us':
+            cy.get(CommonObjects.hrefButtonModal('contact_us')).click()
+            break;
         default:
             console.log('Invalid button')
     }

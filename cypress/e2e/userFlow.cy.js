@@ -2,6 +2,7 @@ import * as commonActions from '../fixtures/pageActions/commonActions.js'
 import * as homePageActions from '../fixtures/pageActions/homePage/homePageActions.js'
 import * as loginPageActions from '../fixtures/pageActions/logInPage/logInPageActions.js'
 import * as productPageActions from '../fixtures/pageActions/productPage/productActions.js'
+import * as contactUsPageActions from '../fixtures/pageActions/contactUsPage/contactUsActions.js'
 //id for unique user creation
 let id = Date.now()
 
@@ -53,5 +54,13 @@ describe('template spec', () => {
 
     //Login
     loginPageActions.fillLogIn(id)
+    loginPageActions.validateLogInStatus(id)
+
+    //Contact Us
+    commonActions.clickHomePageButton('Contact Us')
+    contactUsPageActions.fillContactUsForm('Test User'+ id, 'test'+ id + '@test.com', 'Test Subject', 'Test Message')
+
+    //Logout
+    commonActions.clickHomePageButton('Logout')
   })
 })
