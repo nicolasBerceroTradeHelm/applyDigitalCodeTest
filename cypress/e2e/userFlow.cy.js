@@ -3,28 +3,22 @@ import * as homePageActions from '../fixtures/pageActions/homePage/homePageActio
 import * as loginPageActions from '../fixtures/pageActions/logInPage/logInPageActions.js'
 import * as productPageActions from '../fixtures/pageActions/productPage/productActions.js'
 import * as contactUsPageActions from '../fixtures/pageActions/contactUsPage/contactUsActions.js'
-//id for unique user creation
+//id for unique user creation, this will help with mantining the same user for all test cases
 let id = Date.now()
 
-describe('template spec', () => {
+describe('Apply Digital', () => {
 
   beforeEach(() => {
     commonActions.visitHomePage()  
   })
 
-  
-  it('view Random Product Details', () => {
-    //quick front end validation the correct load of a random product
-    homePageActions.scrollToMiddleOfScreen()
-    homePageActions.clickRandomProduct()
-    homePageActions.validateProductDetails()
-  })
-
-  it.only('Buy a product', () => {
+  it('Buy a product', () => {
+    //Scroll to middle of the page and click on a random product
     homePageActions.scrollToMiddleOfScreen()
     homePageActions.clickRandomProduct()
     homePageActions.validateProductDetails()
     
+    //Add to cart
     productPageActions.changeQuantity(30)
     productPageActions.addToCart()
 
