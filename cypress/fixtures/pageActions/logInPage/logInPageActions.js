@@ -27,6 +27,15 @@ export const validateNewUserCreation= (id) => {
 
     //Validate the account was created
     cy.url().should('include', 'account_created')
-    cy.contains('Account Created!').should('exist')
-    
+    cy.contains('Account Created!').should('exist')    
+}
+
+export const validateLogInStatus = (id) => {
+    cy.get(LoginPageObjects.homePageLogInUser()).should('have.text', 'TestUser'+ id)
+}
+
+export const fillLogIn = (id) => {
+    cy.get(LoginPageObjects.logInEmail()).type('test'+ id + '@test.com')
+    cy.get(LoginPageObjects.logInPassword()).type('TestPassword'+ id)
+    cy.get(LoginPageObjects.logInSubmit()).click()
 }

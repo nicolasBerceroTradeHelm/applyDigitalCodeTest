@@ -17,6 +17,11 @@ class loginPageObjects {
     profileSubmit = () => '[data-qa="create-account"]';
 
     accountCreatedContinue = () => '[data-qa="continue-button"]';
+    homePageLogInUser = () => 'a > b'
+
+    logInEmail = () => '[data-qa="login-email"]';
+    logInPassword = () => '[data-qa="login-password"]';
+    logInSubmit = () => '[data-qa="login-button"]';
 }
 
 export default loginPageObjects;

@@ -9,13 +9,13 @@ export const clickHomePageButton = (button) => {
     switch
     (button) {
         case 'Signup / Login':
-            cy.get(CommonObjects.hrefButtonModal('login')).click()
+            cy.get(CommonObjects.hrefButtonModal('login')).eq(0).click({force: true})
             break;
         case 'View Cart':
             cy.get(CommonObjects.hrefButtonModal('view_cart')).eq(0).click({force: true})
             break;
-        case 'Contact':
-            cy.get(CommonObjects.hrefButtonModal('contact')).click()
+        case 'Logout':
+            cy.get(CommonObjects.hrefButtonModal('logout')).click()
             break;
         default:
             console.log('Invalid button')
