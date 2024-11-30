@@ -13,6 +13,20 @@ describe('Apply Digital', () => {
   })
 
   it('Buy a product', () => {
+
+    //ROLY VO
+        //ROLY VO
+
+            //ROLY VO
+
+                //ROLY VO
+
+                    //ROLY VO
+
+                        //ROLY VO
+
+
+
     //Scroll to middle of the page and click on a random product
     homePageActions.scrollToMiddleOfScreen()
     homePageActions.clickRandomProduct()
